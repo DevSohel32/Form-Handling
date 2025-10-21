@@ -7,7 +7,7 @@ if (isset($_POST["submit"])) {
     $email = dataValidation($_POST["email"]);
     $password = dataValidation($_POST["password"]);
     $confirmPassword = dataValidation($_POST["confirmPassword"]);
-    $role = $_POST["role"];
+    $role = @$_POST["role"];
     $avatarName = $_FILES['avatar']['name'];
     $avatarSize = $_FILES['avatar']['size'];
     $avatarTemp = $_FILES['avatar']['tmp_name'];
